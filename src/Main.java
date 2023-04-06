@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args)
     {
@@ -64,6 +67,100 @@ public class Main {
         System.out.println(text);
 
         // Karar Yapıları
-        
+        int ortalamaNot = 51; //DB'den okundu.
+        int devamsizlik = 11;
+        //scope
+
+        //condition => şart
+        // || => veya operatörü sağ veya solda bir adet true olması durumunda operatörüm true döndürür.
+        if(ortalamaNot < 50 || devamsizlik > 10){
+            System.out.println("Kaldınız");
+        }else{
+            System.out.println("Geçtiniz");
+        }
+        // && => and (ve) operatörü => iki şartın da true olma durumunu kontrol eder
+        if(ortalamaNot > 80 && devamsizlik < 5){
+            System.out.println("Pekiyi geçtiniz");
+        }
+
+        // true || false => true
+        // false || true => true
+        // false || false => false
+
+        // true && false => false
+        // false && true => false
+        // true && true => true
+
+        // switch-case yapısı
+
+        // 0=Sipariş Alındı
+        // 1=Hazırlanıyor
+        // 2=Kargoda
+        // 3=Teslim edildi
+        int status = 5;
+
+        switch(status)
+        {
+            case 0:
+                System.out.println("Sipariş Alındı");
+                break;
+            case 1:
+                System.out.println("Hazırlanıyor");
+                break;
+            case 2:
+                System.out.println("Kargoda");
+                break;
+            case 3:
+                System.out.println("Teslim edildi");
+                break;
+            default: // caselerin hiç birisi condition'ı sağlamadığında çalıştırılır.
+                System.out.println("Hatalı sipariş durumu.");
+                break;
+        }
+
+
+        // Döngüler
+        // Iteration, Iterasyon
+        // Collection
+
+        // for, while
+        // index
+        for(int i=0; i<=10; i++){
+            System.out.println(i);
+        }
+
+        List<String> students = new ArrayList<>();
+        students.add("Can Gire");
+        students.add("Ahmet Çalık");
+        students.add("İbrahim Yıldırım");
+
+       /* for(int i=0; i<students.size(); i++){
+            String student = students.get(i);
+            System.out.println(student);
+        } */
+
+        for(String student:students){
+            System.out.println(student);
+        }
+        int i = 0;
+        while(i < 10) // Infinite Loop => Sonsuz Döngü
+        {
+            System.out.println(i);
+            i = i+1;
+        }
+
+        // Infinite Loop
+        /* while(true){
+            System.out.println("Merhaba");
+        } */
+
+        // do-while
+        System.out.println("**************");
+        int sayi = 11;
+        do{
+            System.out.println(sayi);
+            sayi += 1;
+        }while(sayi < 10);
+
     }
 }
