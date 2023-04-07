@@ -67,7 +67,10 @@ public class Main {
         System.out.println(text);
 
         // Karar Yapıları
-        int ortalamaNot = 51; //DB'den okundu.
+        int vize = 100;
+        int finalNot = 60;
+        double ortalamaNot = (vize * 0.4) + (finalNot * 0.6); //DB'den okundu.
+
         int devamsizlik = 11;
         //scope
 
@@ -161,6 +164,65 @@ public class Main {
             System.out.println(sayi);
             sayi += 1;
         }while(sayi < 10);
-
+        // 3. Gün Ders Başlangıcı
+        calculate(80,100);
+        calculate(50,40);
+        double ortalama1 = calculateAndReturn(30,20);
+        ortalama1 += 45;
+        System.out.println(calculateAndReturn(50,80));
+        calculateAndReturn(50,80,20);
     }
+
+    // Reusability
+    // DRY => Do not repeat yourself
+    // erişimBelirteci dönüşTipi
+
+    // scope-body
+    public static void calculate(int vize, int finalNot)
+    {
+        double ortalama = (vize * 0.4) + (finalNot * 0.6);
+        System.out.println("Ortalama: " + ortalama);
+    }
+
+    // method overloading
+    public static double calculateAndReturn(int vize, int finalNot)
+    {
+        // hesaplama
+        return (vize * 0.4) + (finalNot * 0.6);
+    }
+
+    public static double calculateAndReturn(double finalNot, int performansNotu){
+        return finalNot + performansNotu;
+    }
+
+    public static double calculateAndReturn(int vize, int finalNot, int performansNotu){
+        return ((vize * 0.4) + (finalNot * 0.6)) + performansNotu;
+    }
+    public static double calculateAndReturn(int finalNot, double performansNotu){
+        return finalNot + performansNotu;
+    }
+    //
+
+    // Scope
+    public static void warnUser(double ortalama)
+    {
+        // 207. satırdaki fonksiyonun scope'ı
+        int x = 10;
+        if(ortalama < 50)
+        {
+            // 208.satırdaki if bloğunun scope'i
+            System.out.println(x);
+            int y = 10;
+            System.out.println("Kaldınız");
+        }
+        else
+        {
+            // 213.satırdaki else bloğunun scope'i
+            int z = 10;
+            System.out.println("Geçtiniz");
+        }
+    }
+
+    //
+
 }
