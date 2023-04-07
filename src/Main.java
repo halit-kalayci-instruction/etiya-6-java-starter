@@ -171,6 +171,23 @@ public class Main {
         ortalama1 += 45;
         System.out.println(calculateAndReturn(50,80));
         calculateAndReturn(50,80,20);
+
+
+        // human1 isminde bir obje construct et
+        // instance
+        // nesne (class,sınıf),obje
+        Human human1 = new Human("Halit","Kalaycı",25);
+        human1.sayHello();
+
+        Human human2 = new Human("Fırat","Deniz",30);
+        human2.sayHello();
+
+        Human human3 = new Human();
+        human3.setFirstName("Halit");
+        human3.setLastName("Kalaycı");
+        human3.setAge(25);
+        human3.sayHello();
+        System.out.println(human3.getAge());
     }
 
     // Reusability
@@ -222,7 +239,8 @@ public class Main {
             System.out.println("Geçtiniz");
         }
     }
+    // OOP => Object Oriented Programming
+    // properties, methods
 
-    //
-
+    // nesne, obje
 }
