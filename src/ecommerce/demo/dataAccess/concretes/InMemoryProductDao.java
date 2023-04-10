@@ -1,4 +1,7 @@
-package ecommerce.demo;
+package ecommerce.demo.dataAccess.concretes;
+
+import ecommerce.demo.dataAccess.abstracts.ProductDao;
+import ecommerce.demo.entities.Product;
 
 import java.util.ArrayList;
 import java.util.List;

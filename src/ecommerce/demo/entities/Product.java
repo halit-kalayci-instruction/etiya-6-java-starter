@@ -1,4 +1,4 @@
-package ecommerce.demo;
+package ecommerce.demo.entities;
 
 public class Product
 {

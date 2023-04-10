@@ -1,4 +1,6 @@
-package ecommerce.demo;
+package ecommerce.demo.dataAccess.abstracts;
+
+import ecommerce.demo.entities.Product;
 
 import java.util.List;
 
