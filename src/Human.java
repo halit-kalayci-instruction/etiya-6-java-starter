@@ -2,15 +2,15 @@
 
 // default => same package accesible
 // final (class) => Bu class başka bir class tarafından inherit edilemez. (inheritance)
-public final class Human {
+public class Human {
     // public => Tüm alanlarda erişim sağlanabilir.
     // private => tanımlamanın olduğu classtan erişilebilir.
     // final => Güncellenemiyor
     // protected => Aynı paket veya subclasslar tarafından erişilebilir
-    // Encapsulation
+    // Encapsulation => oop concepts
+    // Inheritance, Abstraction, Polymorphism
     private String firstName;
     private String lastName;
-
     private int age;
     // getter-setter
 
@@ -51,4 +51,5 @@ public final class Human {
     public void sayHello(){
         System.out.println("Hello, my name is " + firstName + " " + lastName);
     }
+    public void talk(String message) { System.out.println(firstName + " is talking: " + message); }
 }

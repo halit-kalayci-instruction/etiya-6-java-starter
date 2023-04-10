@@ -188,6 +188,16 @@ public class Main {
         human3.setAge(25);
         human3.sayHello();
         System.out.println(human3.getAge());
+
+        Student student1 = new Student(); // Human
+        student1.setFirstName("Efe");
+        student1.setLastName("Koprülü");
+        student1.setAge(25);
+        student1.talk("Merhaba");
+        student1.learn();
+
+        Teacher teacher1 = new Teacher(); // Human
+        teacher1.teach();
     }
 
     // Reusability
